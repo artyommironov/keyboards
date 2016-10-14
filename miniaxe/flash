@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+cd ../../qmk_firmware
+set --local dir keyboards/miniaxe/
+rm -rv $dir
+cp -rv ../$dir $dir
+sudo make miniaxe:my:dfu
+rm -rv $dir

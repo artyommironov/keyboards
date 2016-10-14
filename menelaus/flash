@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+cd ../../qmk_firmware
+set --local dir keyboards/menelaus/
+rm -rv $dir
+cp -rv ../$dir $dir
+sudo make menelaus:default:teensy
+rm -rv $dir
